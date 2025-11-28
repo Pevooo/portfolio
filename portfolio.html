@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pavly — Portfolio</title>
+    <meta name="description" content="Personal portfolio showcasing projects, skills and contact." />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="brand">
+                <!-- <div class="logo">P</div> -->
+                <img src="pfp.jpeg" class="logo">
+                <div>
+                    <div style="font-weight:700">Pavly</div>
+                    <div style="font-size:12px;color:var(--muted);margin-top:2px">Software Engineer</div>
+                </div>
+            </div>
+
+            <nav>
+                <button class="mobile-nav-toggle" id="navToggle">Menu</button>
+                <ul id="navList">
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="mailto:pavlysamuelatef@gmail.com">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="intro">
+                    <h1>Hi — I'm Pavly.</h1>
+                    <p>I build web apps, data tools and small ML experiments. I love clean UI, fast performance and
+                        readable code. Below are some selected projects and tools I work with.</p>
+
+                    <div class="cta-row">
+                        <button class="btn" onclick="scrollToSection('projects')"
+                            style="font-family: 'JetBrains Mono';">View projects</button>
+                        <a class="btn ghost" href="mailto:pavlysamuelatef@gmail.com">Get in touch</a>
+                    </div>
+
+                    <div style="margin-top:18px;color:var(--muted);font-size:14px">Currently open to collaborative
+                        projects.</div>
+                </div>
+
+                <aside class="profile">
+                    <img class="avatar" src="pfp.jpeg">
+                    <div style="font-weight:700">Pavly</div>
+                    <div class="meta">Full-stack web dev • .NET • C# • Angular • Azure</div>
+                    <div style="display:flex;gap:8px;margin-top:12px">
+                        <a class="tag" href="#projects">Projects</a>
+                        <a class="tag" href="mailto:pavlysamuelatef@gmail.com">Contact</a>
+                    </div>
+                </aside>
+            </section>
+
+            <section id="experience">
+                <div class="section-title">
+                    <h2>Work Experience</h2>
+                    <div class="muted">Where I’ve worked</div>
+                </div>
+
+                <div class="experience-list">
+                    <article class="exp-item">
+                        <div class="exp-header">
+                            <h3>Software Engineering Intern — Microsoft</h3>
+                            <div class="muted" style="font-size:12px">2024</div>
+                        </div>
+                        <p class="muted">
+                            Worked on Microsoft SwiftKey keyboard.
+                        </p>
+                        <ul class="exp-bullets">
+                            <li>Delivered retention-driven A/B test to optimize the keyboard toolbar UI</li>
+                            <li>Resolved 10+ bugs and performed code cleanups, enhancing app stability and maintainability.</li>
+                            <li>Improved app accessibility, implementing better contrast ratios, content descriptions, and TalkBack support to align with Android accessibility guidelines.</li>
+                        </ul>
+                        <div class="tags">
+                            <span class="tag">Kotlin</span>
+                            <span class="tag">Android</span>
+                            <span class="tag">Git</span>
+                            <span class="tag">Azure</span>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+
+
+            <section id="projects">
+                <div class="section-title">
+                    <h2>Selected Projects</h2>
+                    <div class="muted">Click a project to open details</div>
+                </div>
+
+                <div class="grid" id="projectsGrid">
+                    <article class="card" data-title="FeedPulse"
+                        data-desc="Spark streaming pipeline that ingests social comments, performs sentiment & topic extraction, stores in Delta Lake and visualizes reports."
+                        data-tags="Apache Spark,Delta Lake,Python,Azure"
+                        data-link="https://github.com/Pevooo/feedpulse">
+                        <div style="display:flex;justify-content:space-between;align-items:start">
+                            <h3>FeedPulse</h3>
+                            <div class="muted" style="font-size:12px">2025</div>
+                        </div>
+                        <p class="muted">A scalable pipeline for real-time analysis of social media comments.</p>
+                        <div class="tags">
+                            <span class="tag">Apache Spark</span>
+                            <span class="tag">Delta Lake</span>
+                            <span class="tag">Python</span>
+                        </div>
+                    </article>
+
+                    <article class="card" data-title="CrewAI Chatbot"
+                        data-desc="A chatbot that integrates with data sources, answers questions and generates charts on demand."
+                        data-tags="Python,Flask,ML">
+                        <h3>CrewAI Chatbot</h3>
+                        <p class="muted">Chatbot for data querying, visualizations and conversational workflows.</p>
+                        <div class="tags"><span class="tag">Flask</span><span class="tag">Python</span></div>
+                    </article>
+
+                    <article class="card" data-title="Memorial Web App"
+                        data-desc="A social app built with Flask where users can register, post and message — emphasis on clean UX and privacy."
+                        data-tags="Flask,SQLite,Angular">
+                        <h3>Memorial Web App</h3>
+                        <p class="muted">A polished web app with auth and private messaging.</p>
+                        <div class="tags"><span class="tag">Angular</span><span class="tag">SQLite</span></div>
+                    </article>
+
+                </div>
+            </section>
+
+            <section id="skills">
+                <div class="section-title">
+                    <h2>Skills & Tools</h2>
+                    <div class="muted">Technologies I use often</div>
+                </div>
+
+                <div class="two-col">
+                    <div>
+                        <div class="skills-list" style="margin-top:12px">
+                            <div class="skill">JavaScript / TypeScript</div>
+                            <div class="skill">Angular</div>
+                            <div class="skill">Python</div>
+                            <div class="skill">Apache Spark</div>
+                            <div class="skill">Delta Lake</div>
+                            <div class="skill">C# / .NET</div>
+                            <div class="skill">Azure</div>
+                            <div class="skill">SQL</div>
+                            <div class="skill">CI/CD</div>
+                            <div class="skill">Github Actions</div>
+                            <div class="skill">Git</div>
+                            <div class="skill">Redis</div>
+                        </div>
+
+                        <h4 style="margin-top:18px">Other strengths</h4>
+                        <p class="muted">Problem solving, system design, clear documentation, teamwork, test-driven
+                            development.</p>
+                    </div>
+
+                    <aside
+                        style="background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)">
+                        <h3 style="margin-top:0">Contact</h3>
+                        <p class="muted">I'm open to internships, freelance work and collaborations. Let's build
+                            something.</p>
+                        <p style="margin-top:12px"><strong>Email</strong><br><a href="mailto:pavlysamuelatef@gmail.com"
+                                style="color:var(--accent)">pavlysamuelatef@gmail.com</a></p>
+                        <p><strong>Location</strong><br><span class="muted">Cairo, Egypt</span></p>
+                        <div style="display:flex;gap:10px;margin-top:12px">
+                            <a class="tag" href="https://github.com/Pevooo">GitHub</a>
+                            <a class="tag" href="https://www.linkedin.com/in/pavlysamuel/">LinkedIn</a>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="muted" style="padding-bottom: 10px;">© <span id="year"></span> Pavly — Made with care • Built
+                with HTML, CSS & JS</div>
+        </footer>
+    </div>
+
+    <!-- Modal container -->
+    <div id="modalRoot" style="display:none"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
