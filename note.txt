@@ -1,1 +1,3 @@
 This project was made with the help of generative AI.
+
+hosted version in case teams doesn't work well: https://pevooo.github.io/portfolio/
